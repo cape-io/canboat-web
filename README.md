@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CAN Boat Message Info
 
-## Available Scripts
+Simple web interface allowing the most basic interaction with the pgn database.
+
+## Development
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
