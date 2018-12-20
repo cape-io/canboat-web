@@ -3,9 +3,7 @@ const fs   = require('fs').promises
 const pgnInfo = require('@canboat/pgns')
 const { fixInfo } = require('./fixPgns')
 
-console.log('fixInfo', fixInfo)
-
-const FILENAME = '/build/index.json'
+const FILENAME = 'build/index.json'
 const prepSave = _.flow(
   fixInfo,
   _.partialRight(JSON.stringify, [null, 2]),
