@@ -1,3 +1,5 @@
+const fetch = require("node-fetch")
+
 const API_ENDPOINT = 'https://canboat.cape.io/index.json'
 
 const sendJson = data => ({
