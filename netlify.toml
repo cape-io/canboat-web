@@ -4,7 +4,7 @@
   Publish = "build"
 
 [[redirects]]
-  from = "/pgn/*.json"
+  from = "/pgn/*"
   to = "/.netlify/functions/hello?name=:splat"
   status = 200
   force = false
