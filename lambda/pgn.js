@@ -1,4 +1,4 @@
-const fetch = require("node-fetch")
+import fetch from "node-fetch"
 
 const API_ENDPOINT = 'https://canboat.cape.io/index.json'
 
@@ -9,7 +9,7 @@ const sendJson = data => ({
     'Content-Type': 'application/json',
   }
 })
-exports.handler = async (event, context) => {
+export function handler(event, context) {
   const key = event.queryStringParameters.pgn;
 
   return fetch(API_ENDPOINT)

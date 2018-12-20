@@ -1,4 +1,4 @@
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
   const name = event.queryStringParameters.name || "World";
 
   return {

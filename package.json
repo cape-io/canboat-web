@@ -13,6 +13,7 @@
   "scripts": {
     "data": "node savePgns.js",
     "start": "react-scripts start",
+    "build:server": "netlify-lambda build lambda",
     "build": "react-scripts build && npm run data",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -25,5 +26,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "netlify-lambda": "^1.1.1",
+    "node-fetch": "^2.3.0"
+  }
 }
