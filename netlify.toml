@@ -1,0 +1,10 @@
+[build]
+  Command = "yarn build"
+  Functions = "functions"
+  Publish = "build"
+
+[[redirects]]
+  from = "/pgn/*.json"
+  to = "/functions/hello?name=:splat"
+  status = 200
+  force = false
