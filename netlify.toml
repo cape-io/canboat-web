@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/pgn/*.json"
-  to = "/functions/hello?name=:splat"
+  to = "/.netlify/functions/hello?name=:splat"
   status = 200
   force = false
