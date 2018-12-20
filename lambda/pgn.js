@@ -11,10 +11,10 @@ const sendJson = data => ({
 })
 export function handler(event, context) {
   const key = event.queryStringParameters.pgn;
-
+  console.log(key)
   return fetch(API_ENDPOINT)
     .then(response => response.json())
-    .then(info => info.PGNs[key])
+    .then(info => (info.PGNs[key] || [key, info.PGNs]))
     .then(sendJson)
     .catch(error => ({ statusCode: 422, body: String(error) }));
 }
