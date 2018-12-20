@@ -14,7 +14,7 @@
     "data": "node savePgns.js",
     "start": "react-scripts start",
     "build:server": "netlify-lambda build lambda",
-    "build:site": "react-scripts build && npm run data",
+    "build:site": "react-scripts build && yarn data",
     "build": "yarn build:site && yarn build:server",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

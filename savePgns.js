@@ -1,15 +1,18 @@
 const _ = require('lodash/fp')
 const fs   = require('fs').promises
-const pgnInfo = require('@canboat/pgns')
+const pgnInfoRaw = require('@canboat/pgns')
 const { fixInfo } = require('./fixPgns')
 
-const FILENAME = 'build/index.json'
-const prepSave = _.flow(
-  fixInfo,
-  _.partialRight(JSON.stringify, [null, 2]),
-)
-const saveJsonFile = pgns =>
-  fs.writeFile(FILENAME, prepSave(pgns), { encoding: 'utf8' })
+const pgnInfo = fixInfo(pgnInfoRaw)
 
-saveJsonFile(pgnInfo)
-  .then(console.log)
+const prepSave = _.partialRight(JSON.stringify, [null, 2])
+
+const saveJsonFile = ([filename, data]) =>
+  fs.writeFile(`public/pgn/${filename}.json`, prepSave(data), { encoding: 'utf8' })
+
+// const savePgn = data => saveJsonFile(data.PGN, data)
+const savePgn = _.flow(_.over(['0.PGN', _.identity]), saveJsonFile)
+saveJsonFile(['index', pgnInfo])
+  .then(() => Promise.all(_.map(savePgn, pgnInfo.PGNs)))
+  // .then(console.log)
+  .then(() => console.log('DONE'))
