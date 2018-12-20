@@ -4,14 +4,16 @@
   "private": true,
   "dependencies": {
     "@canboat/pgns": "^1.0.1",
+    "cape-lodash": "^2.4.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
     "react-table": "^6.8.6"
   },
   "scripts": {
+    "data": "node savePgns.js",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run data",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1042,6 +1042,10 @@ address@1.0.3, address@^1.0.1:
   resolved "https://registry.yarnpkg.com/address/-/address-1.0.3.tgz#b5f50631f8d6cec8bd20c963963afb55e06cbce9"
   integrity sha512-z55ocwKBRLryBs394Sm3ushTtBeg6VAeuku7utSoSnsJKvKcnXFIyC6vh27n3rXyxSgkJBBCAvyOn7gSUcTYjg==
 
+"affirmative@github:webmasterkai/affirmative":
+  version "0.1.1"
+  resolved "https://codeload.github.com/webmasterkai/affirmative/tar.gz/af1979d655605573779d5b8598ba575ebeca6286"
+
 ajv-errors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.0.tgz#ecf021fa108fd17dfb5e6b383f2dd233e31ffc59"
@@ -1985,6 +1989,14 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000884, caniuse-lite@^1.0.30000887, can
   version "1.0.30000903"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000903.tgz#86d46227759279b3db345ddbe778335dbba9e858"
   integrity sha512-T1XVJEpGCoaq7MDw7/6hCdYUukmSaS+1l/OQJkLtw7Cr2+/+d67tNGKEbyiqf7Ck8x6EhNFUxjYFXXka0N/w5g==
+
+cape-lodash@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/cape-lodash/-/cape-lodash-2.4.0.tgz#613af5e65ecf6921c52adee6cd98011460df0f6c"
+  integrity sha512-Eni18zKPHEqtNSMMt7KyzHyyfAYwwZKgS/Gzzqu8fCyfv7Clc2JROkfRPLn7bRVoYkc3c6EV5ot57uuecDXQ7A==
+  dependencies:
+    affirmative webmasterkai/affirmative
+    lodash "^4.17.5"
 
 capture-exit@^1.2.0:
   version "1.2.0"
